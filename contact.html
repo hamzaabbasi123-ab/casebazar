@@ -1,0 +1,164 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styling for the form container */
+        .form2 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: -80px;
+          margin-top: -30px;
+          width: 370px ;
+          height: 200px;
+          background-color: #000; /* Black background */
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+      
+        /* Styling for the query input box */
+        #query {
+          width: 100%;
+          height: 100px; /* Make the input box larger */
+          padding: 15px;
+          font-size: 18px;
+          border: 2px solid #00ff00; /* Green border */
+          border-radius: 10px;
+          background-color: #1a1a1a; /* Dark background for input */
+          color: #fff; /* White text */
+          margin-top: 10px;
+        }
+      
+        /* Styling for the submit button */
+        .form2-details button {
+          margin-top: 15px;
+          padding: 10px 20px;
+          font-size: 18px;
+          background-color: #00ff00; /* Green background */
+          color: #000; /* Black text */
+          border: none;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        }
+      
+        /* Hover effect for the button */
+        .form2-details button:hover {
+          background-color: #00cc00; /* Darker green on hover */
+        }
+      </style>
+    <title>casebazar</title>
+</head>
+<body>
+    <section class=" top-txt ">
+        <div class="head container ">
+            <div class="head-txt ">
+               
+            </div>
+            
+        </div>
+    </section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Shop</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="logo">
+                <img src="logocase.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <section id="home">
+        <div class="home_page ">
+            <div class="home_img ">
+                <img src="back.png" alt="img ">
+            </div>
+            <div class="home_txt ">
+                <p class="collectio ">MOBILE ACCESSORIES <br> & COVERS</p>
+                <h2>Contact with us</h2>
+                <div class="home_label ">
+                    <p>A specialist label creating luxury essentials. Ethically <br>with an unwavering commitment to exceptional quality.</p>
+                </div>
+                <button><a href="cart.html">SHOP NOW</a><i class='bx bx-right-arrow-alt'></i></button>
+                <div class="home_social_icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+    <footer>
+        <div class="footer-container container">
+            
+            <form id="whatsapp2-form">
+                <div class="form2">
+                  <div class="form2-details">
+                   
+                    <input type="text" id="query" placeholder="Any Query....." required>
+                   
+              
+                    <br>
+                    <button type="submit">WhatsApp me</button>
+                  </div>
+                </div>
+              </form>
+           
+            <div class="content_3">
+                <h4>SHOPPING</h4>
+                <a href="index.html">Home</a>
+                <a href="cart.html">Shop</a>
+                <a href="./contact.html">Contact Us</a>
+                
+            </div>
+            <div class="content_4">
+                <h4>NEWLETTER</h4>
+                <p>Be the first to know about new<br>arrivals, look books, sales & promos!</p>
+                <div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>
+                <hr>
+            </div>
+        </div>
+        
+    </footer>
+      <script>
+        document.getElementById('whatsapp2-form').addEventListener('submit', function(e) {
+          e.preventDefault(); // Prevent default form submission
+      
+          // Get form values
+          var query = document.getElementById('query').value; // Correct variable name
+      
+          // Format WhatsApp message
+          var message = encodeURIComponent(`Any query: ${query}`); // Encode message for URL
+      
+          // WhatsApp URL
+          var whatsappUrl = `https://wa.me/923485158633?text=${message}`;
+      
+          // Redirect to WhatsApp
+          window.open(whatsappUrl, '_blank');
+        });
+      </script>
+      
+  
+ 
+</body>
+
+</html>

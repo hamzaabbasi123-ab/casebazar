@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="CodeHim">
+    <style>
+
+           /* Style for WhatsApp button */
+.whatsapp-button {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  background-color: #000000; /* WhatsApp green */
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 50px; /* Rounded button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 10px;
+  position: fixed; /* Fixed positioning */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  z-index: 9999; /* Ensure it is above other content */
+}
+
+.whatsapp-button:hover {
+  background-color: #128C7E; /* Darker green on hover */
+}
+
+.whatsapp-icon {
+  width: 40px; /* Adjust size as needed */
+  height: 40px; /* Adjust size as needed */
+  margin-left: -5px;
+}
+
+  /* Styling for the form container */
+  .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #000; /* Black background */
+  }
+
+  /* Styling for the form details */
+  .form-details {
+    background-color: #1a1a1a; /* Dark gray background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+  }
+
+  /* Styling for form inputs */
+  .form-details input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #00ff00; /* Green border */
+    border-radius: 5px;
+    background-color: #2a2a2a; /* Darker background inside inputs */
+    color: #fff; /* White text */
+    font-size: 16px;
+  }
+
+  /* Styling for the submit button */
+  .form-details button {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ff00; /* Green background */
+    color: #000; /* Black text */
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Hover effect for the button */
+  .form-details button:hover {
+    background-color: #00cc00; /* Darker green on hover */
+  }
+
+  /* Styling for the heading */
+  .form-details h2 {
+    color: #ffffff; /* Green text */
+    margin-bottom: 20px;
+  }
+</style>
+
+    <title>casebazar</title>
+    
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Demo CSS (No need to include it into your project) -->
+    <link rel="stylesheet" href="css/demo.css">
+    
+  </head>
+  <body>
+        <!-- WhatsApp Button -->
+<a href="https://wa.me/923185291114" class="whatsapp-button" target="_blank">
+  <img src="https://th.bing.com/th/id/R.35ffa6e353468280a59e5b4672b8aba0?rik=7hSGUWDIrp%2bhLg&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2016%2f04%2fWhatsApp-PNG-Picture.png&ehk=deet7YvWTlFf4Xe0LZBhIsS4NJ84GeEnFqKz44GkR%2bo%3d&risl=&pid=ImgRaw&r=0" alt="WhatsApp" class="whatsapp-icon">
+  
+</a>
+    <header class="intro">
+      <img src="logocase.png" alt="">
+      
+      <h1>WELCOME TO  CASEBAZAR </h1>
+      <h3>Fill your form and then also fill your cart</h3>
+      <p>Enjoy your shopping</p>
+      
+      
+    </header>
+    
+    <form id="whatsapp-form">
+      <div class="form">
+        <div class="form-details">
+          <h2>Fill correctly</h2>
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="text" id="phone" placeholder="Phone Number" required>
+          <input type="text" id="address" placeholder="Address" required>
+    
+          <br>
+          <button type="submit">WhatsApp me</button>
+        </div>
+      </div>
+    </form>
+    
+    <main>
+      <!-- Start DEMO HTML (Use the following code into your project)-->
+   <header class="header">
+  <div class="container header__top">
+    <div class="header__logo">
+      <h1 class="header__title">
+        CB
+        <span class="header__subtitle">Case Bazar</span>
+      </h1>
+    </div>
+    <div class="header__cart">
+      <ul>
+        <li class="header__submenu" id="submenu">
+          <button class="header__cart-btn" id="toggle-cart-btn"><svg class="cart" width="24" height="24" viewBox="0 0 24 24">
+  <path d="M17,18C15.89,18 15,18.89 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20C19,18.89 18.1,18 17,18M1,2V4H3L6.6,11.59L5.24,14.04C5.09,14.32 5,14.65 5,15A2,2 0 0,0 7,17H19V15H7.42A0.25,0.25 0 0,1 7.17,14.75C7.17,14.7 7.18,14.66 7.2,14.63L8.1,13H15.55C16.3,13 16.96,12.58 17.3,11.97L20.88,5.5C20.95,5.34 21,5.17 21,5A1,1 0 0,0 20,4H5.21L4.27,2M7,18C5.89,18 5,18.89 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20C9,18.89 8.1,18 7,18Z"></path>
+</svg> Your Cart</button>
+          <div id="shopping-cart" class="shopping-cart-container">
+            <table id="cart-content">
+              <thead>
+                <tr>
+                  <p>Select items and send me by clicking Proceed</p>
+                  <th>Image</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+            <p class="total-container" id="total-price"></p>
+            <a href="#" id="checkout-btn" class="cart-btn">Checkout</a>
+            <a href="#" id="clear-cart" class="cart-btn">Clear Cart</a>
+            <a href="#" id="proceed-next-btn" class="cart-btn">Proceed Next</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="header__main">
+    <p class="display-title text-light">
+
+      Enjoy with our lovely gadgets!!!
+    </p>
+  </div>
+  <div class="arrow"><svg width="24" height="24" viewBox="0 0 24 24">
+  <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+</svg></div>
+</header>
+<main class="container page-content">
+  <h2 class="page-title">Our Products</h2>
+  <h3>Iphone cases & Keychains</h3>
+  <div class="grid" id="grid">
+    <div class="card">
+      <img src="./img/image-1.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">Web Design for beginners</h4> <br>
+       
+        <p class="card__price">Price : $200</p> <br>
+        <button class="card__btn add-to-cart" data-id="6">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/image-2.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">Learn to cook Italian food</h4> <br>
+        <p class="card__price">Price : $100</p> <br>
+        <button  class="card__btn add-to-cart"  data-id="7" >Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/image-3.jpg" class="card__image" alt="">
+      <div class="card__info">
+        <h4 class="card__title">Learn Guitar</h4> <br>
+        
+        <p class="card__price">Price : $150</p> <br>
+        <button class="card__btn add-to-cart" data-id="8">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/image-4.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Gardening 101</h4> <br>
+       
+        <p class="card__price">Price : $50</p> <br>
+        <button class="card__btn add-to-cart" data-id="9">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/image-5.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Cook a Home-Made Cake</h4> <br>
+         
+        <p class="card__price">Price : $100</p> <br>
+        <button class="card__btn add-to-cart" data-id="10">Add to Cart</button>
+      </div>
+    </div>
+    <!--.card-->
+    <div class="card">
+      <img src="./img/image-6.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Modern JavaScript</h4> <br>
+       
+        <p class="card__price">Price : $300</p> <br>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./img/image-6.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Modern JavaScript</h4> <br>
+       
+        <p class="card__price">Price : $300</p> <br>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    <div class="card">
+      <img src="./img/image-6.jpg" alt="" class="card__image">
+      <div class="card__info">
+        <h4 class="card__title">Modern JavaScript</h4> <br>
+       
+        <p class="card__price">Price : $300</p> <br>
+        <button class="card__btn add-to-cart" data-id="11">Add to Cart</button>
+      </div>
+    </div>
+    
+  </div>
+</main>
+ 
+
+<script>
+  document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Get form values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var phone = document.getElementById('phone').value;
+    var address = document.getElementById('address').value;
+
+    // Format WhatsApp message
+    var message = `Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AAddress: ${address}`;
+
+    // WhatsApp URL
+    var whatsappUrl = `https://wa.me/923485158633?text=${message}`;
+
+    // Redirect to WhatsApp
+    window.open(whatsappUrl, '_blank');
+  });
+</script>
+
+<script>
+  // Function to extract cart details including image URL, name, price, and total price
+  const getCartDetails = () => {
+    const rows = document.querySelectorAll('#cart-content tbody tr');
+    let cartItems = [];
+    
+    // Loop through each row of the table to collect cart items
+    rows.forEach(row => {
+      const imageUrl = row.cells[0].querySelector('img').src; // Get image URL
+      const itemName = row.cells[1].innerText; // Get item name
+      const itemPrice = row.cells[2].innerText; // Get item price
+      cartItems.push(`Item: ${itemName}%0AImage: ${imageUrl}%0APrice: ${itemPrice}`);
+    });
+
+    const totalPrice = document.getElementById('total-price').innerText;
+    
+    // Return both cart items and total price
+    return {
+      cartItems: cartItems.join('%0A%0A'), // Join items with line breaks for WhatsApp
+      totalPrice: totalPrice
+    };
+  };
+
+  // Function to format the message for WhatsApp
+  const formatCartMessage = ({ cartItems, totalPrice }) => 
+    `Your Cart:%0A${cartItems}%0A%0A${totalPrice}`;
+
+  // Function to send the message to WhatsApp
+  const sendCartToWhatsApp = message => {
+    const whatsappUrl = `https://wa.me/923485158633?text=${message}`;
+    window.open(whatsappUrl, '_blank'); // Open WhatsApp with the pre-filled message
+  };
+
+  // Event listener for the "Proceed Next" button
+  document.getElementById('proceed-next-btn').addEventListener('click', e => {
+    e.preventDefault(); // Prevent default action
+    
+    const cartDetails = getCartDetails(); // Get cart details
+    const message = formatCartMessage(cartDetails); // Format the message
+    sendCartToWhatsApp(message); // Send the message to WhatsApp
+  });
+</script>
+  
+  <script  src="./js/script.js"></script>
+  </body>
+</html>
